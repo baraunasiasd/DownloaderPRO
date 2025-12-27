@@ -13,14 +13,23 @@ powershell -Command "Add-AppxPackage -RegisterByFamilyName -MainPackage Microsof
 
 echo.
 :: 2. Executa o comando no CMD para instalar o yt-dlp
-:: O parametro --accept-source-agreements evita que o usuario precise digitar 'S'
 echo [2/2] Instalando yt-dlp via Winget...
 winget install yt-dlp --accept-source-agreements --accept-package-agreements
 
 echo.
 echo ======================================================
 echo    INSTALACAO CONCLUIDA COM SUCESSO!
-echo    Pressione qualquer tecla para sair.
 echo ======================================================
-pause >nul
+echo.
+
+:: Cria o arquivo sinalizador antes de fechar
 echo instalacao_concluida > instalado.txt
+
+echo O programa precisa ser reiniciado para reconhecer o novo motor.
+echo Fechando em 5 segundos...
+timeout /t 5
+
+:: Fecha o DownloaderPRO (mshta.exe) para forçar a atualização do PATH
+taskkill /f /im mshta.exe >nul 2>&1
+
+exit
