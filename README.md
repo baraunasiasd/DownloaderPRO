@@ -13,9 +13,8 @@ baixar vídeos, áudios (MP3) e playlists completas.
 Ao abrir o "DownloaderPro.bat" pela primeira vez:
 - Clique no botão verde "📥 INICIAR INSTALAÇÃO".
 - Uma janela abrirá para configurar os motores de download.
-- Aguarde a janela fechar sozinha. O programa irá reiniciar 
-  com todas as funções liberadas.
-
+- Aguarde a janela fechar sozinha. Abra novamente o arquivo "DownloaderPro" 
+para começar a usar o programa
 ------------------------------------------------------------
 #2. COMO REALIZAR DOWNLOADS:
 ------------------------------------------------------------
